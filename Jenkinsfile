@@ -12,9 +12,9 @@ pipeline {
                 sh 'ant -lib /opt/microfocus/EnterpriseDeveloper/lib/mfant.jar -f .cobolBuild'
             }
         }
-        stage('Build'){
+        stage('Store'){
             steps{
-                echo 'hola'
+                archiveArtifacts "${env.BUILD_ID}/New_Configuration.bin/Coboldemo"
             }
         }
     }
