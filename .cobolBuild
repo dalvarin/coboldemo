@@ -83,7 +83,7 @@
 	<mfdirlist id="cobol_directive_set_1">
 		<directive name="SOURCETABSTOP" id="sourcetabstop" value="4"/>
 		<directive name="COPYEXT" id="copyext" value="cpy,cbl"/>
-		<directive name="COLLECTION" id="collection" value="Coboldemo"/>
+	<!--	<directive name="COLLECTION" id="collection" value="Coboldemo"/> -->
 	</mfdirlist>
 	<!--  **********************  -->
 	<!--  * COBOL source files *  -->
