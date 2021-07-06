@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Store'){
             steps{
-                archiveArtifacts "${env.BUILD_ID}/New_Configuration.bin/Coboldemo"
+                archiveArtifacts "New_Configuration.bin/Coboldemo"
             }
         }
     }
