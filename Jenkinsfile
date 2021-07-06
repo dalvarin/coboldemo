@@ -6,9 +6,10 @@ pipeline {
             steps {
                 echo 'Hello World'
                 sh '. /opt/microfocus/EnterpriseDeveloper/bin/cobsetenv'
-                sh 'export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64'
-                sh 'export PATH=$PATH:/usr/lib/jvm/java-11-openjdk-amd64/bin'
+                sh 'export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.292.b10-1.el7_9.x86_64/'
+                sh 'export PATH=$PATH:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.292.b10-1.el7_9.x86_64/bin'
                 sh 'export ANT_OPTS=-Xmx512m'
+                sh 'ant -lib $COBDIR/lib/mfant.jar -f .cobolBuild'
             }
         }
         stage('Build'){
