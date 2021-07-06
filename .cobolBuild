@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="Coboldemo" default="cobolbuild" basedir="." xmlns:ac="antlib:net.sf.antcontrib">
-	<taskdef resource="com/microfocus/ant/antlib.xml"/>
+	<taskdef resource="com/microfocus/ant/antlib.xml">
+		<classpath>
+    			<pathelement location="/opt/microfocus/EnterpriseDeveloper/lib/mfant.jar"/>
+  		</classpath>
+	</taskdef>
 	<!--  ***********************************  -->
 	<!--  * General property initialisation *  -->
 	<!--  ***********************************  -->
