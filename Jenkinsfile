@@ -5,11 +5,12 @@ pipeline {
         stage('Init Cobol Environment') {
             steps {
                 script {
-                    . /opt/microfocus/EnterpriseDeveloper/bin/cobsetenv
-                    export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.292.b10-1.el7_9.x86_64/
-                    export PATH=$PATH:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.292.b10-1.el7_9.x86_64/bin
-                    export ANT_OPTS=-Xmx512m
-                    ant -f .cobolBuild
+                    echo 'Hello World'
+                    sh '. /opt/microfocus/EnterpriseDeveloper/bin/cobsetenv'
+                    sh 'export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.292.b10-1.el7_9.x86_64/'
+                    sh 'export PATH=$PATH:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.292.b10-1.el7_9.x86_64/bin'
+                    sh 'export ANT_OPTS=-Xmx512m'
+                    sh 'ant -lib /opt/microfocus/EnterpriseDeveloper/lib/mfant.jar -f .cobolBuild'
                 }
             }
         }
